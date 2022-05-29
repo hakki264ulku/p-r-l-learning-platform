@@ -11,7 +11,19 @@ export const StudentMenu = () => {
     const history = useHistory()
 
     useEffect(() => {
-        console.log(menu.data);
+        const urlParams = new URLSearchParams(window.location.search)
+        console.log(urlParams.get("type"));
+        const newMenuData = []
+        if(urlParams.has("type")) {
+            for (const m of menu.data) {
+                if(m.type === urlParams.get("type")) {
+                    newMenuData.push({...m, isClicked: true})
+                } else {
+                    newMenuData.push({...m, isClicked: false})
+                }
+            }
+            dispatch(UpdateMenuData(newMenuData))
+        }
     })
 
     const handleClick = (buttonType) => {
