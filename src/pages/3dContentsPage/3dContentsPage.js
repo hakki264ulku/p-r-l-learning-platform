@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { StudentMenu } from '../../components/StudentMenu/StudentMenu'
 import { CardContainer, CardImage, CardTitle, Container, ContentContainer, ContentsContainer, Title } from './3dContentsPageStyles'
 
 export const ThreeDContentsPage = () => {
     const menu = useSelector(state => state.menu)
+    const history = useHistory()
 
     const [title, setTitle] = useState("3D Content")
 
@@ -18,6 +20,10 @@ export const ThreeDContentsPage = () => {
 
     })
 
+    const handleClick = (id) => {
+        history.push(`/student/3dcontent/content?id=${id}`)
+    }
+
 
     return (
         <Container>
@@ -27,45 +33,11 @@ export const ThreeDContentsPage = () => {
                 <StudentMenu />
                 <ContentsContainer>
 
-                    <CardContainer>
+                    <CardContainer onClick={() => handleClick("123")} >
                         <CardTitle>Card Title</CardTitle>
                         <CardImage src='https://picsum.photos/id/227/200/150' />
                     </CardContainer>
 
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
-
-                    <CardContainer>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardImage src='https://picsum.photos/id/227/200/150' />
-                    </CardContainer>
 
                 </ContentsContainer>
 
