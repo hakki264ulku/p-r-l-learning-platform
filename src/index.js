@@ -3,18 +3,19 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 import "./components/FontawesomeIcons"
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from "react-redux";
+import store from './redux/configureStore';
 
 
 
 ReactDOM.render(
   <React.Fragment>
     <SimpleReactLightbox>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </SimpleReactLightbox>
   </React.Fragment>,
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
   document.getElementById('root')
 );
 

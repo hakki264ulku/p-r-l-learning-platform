@@ -1,10 +1,10 @@
 import React from 'react'
 import { MenuButton, MenuButtonClicked } from './StudentMenuStyles'
 
-export const StudentMenuButton = ({isClicked = false, text = ""}) => {
+export const StudentMenuButton = ({isClicked = false, text = "", onClickMethod}) => {
     if (isClicked) {
-        return (<MenuButtonClicked>{text}</MenuButtonClicked>)
+        return (<MenuButtonClicked onClick={onClickMethod} >{text}</MenuButtonClicked>)
     } else {
-        return (<MenuButton>{text}</MenuButton>)
+        return (<MenuButton onClick={onClickMethod} >{text}</MenuButton>)
     }
 }
