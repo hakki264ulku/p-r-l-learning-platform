@@ -13,6 +13,7 @@ export const StudentDashboard = () => {
     const options = {
         title: "Science Analytics",
         is3D: true,
+        'backgroundColor': 'transparent' //Analytics Chart Transparent
     };
 
     return (
@@ -26,7 +27,7 @@ export const StudentDashboard = () => {
                         chartType="PieChart"
                         data={data}
                         options={options}
-                        width={"90%"}
+                        width={"100%"}
                         height={"300px"}
                     />
                 </ChartContainer>
