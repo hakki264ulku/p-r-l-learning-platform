@@ -23,6 +23,7 @@ import SignUp from './pages/Subscribe/SignUp';
 import StudentHomePage from './pages/StudentHomePage/StudentHomePage';
 import { ThreeDContentPage } from './pages/3dContentPage/3dContentPage';
 import { ThreeDContentsPage } from './pages/3dContentsPage/3dContentsPage';
+import { Logout } from './pages/Subscribe/logout';
 
 /* import font */
 // basename="/kintergarten"
@@ -47,6 +48,7 @@ const App= ()=> {
           <Route exact path="/classe/details" component={() => <ClassesDetails title="classes" title1="details" />}/>
           <Route exact path="/event/details" component={() => <EventDetails title="events" title1="details" />}/>
           <Route exact path="/login" component={() =>  <Login title="Login" /> } />
+          <Route exact path="/logout" component={() =>  <Logout title="Logout" /> } />
           <Route exact path="/signup" component={() => <SignUp title="Sign Up" />} />
           <Route exact path="/student" component={() => <StudentHomePage title="Home Page" />} />
           <Route exact path="/student/3dcontent" component={()=> <ThreeDContentsPage /> } />
