@@ -8,6 +8,14 @@ export const ThreeDContentsPage = () => {
     const menu = useSelector(state => state.menu)
     const history = useHistory()
 
+    useEffect(() => {
+        const isAuthenticated = localStorage.getItem("isAuthenticated");
+        if(!isAuthenticated) {
+            history.push("/login")
+        }
+    });
+
+
     const [title, setTitle] = useState("3D Content")
 
     useEffect(() => {
@@ -18,7 +26,7 @@ export const ThreeDContentsPage = () => {
             }
         }
 
-    })
+    }, [title, menu])
 
     const handleClick = (id) => {
         history.push(`/student/3dcontent/content?id=${id}`)

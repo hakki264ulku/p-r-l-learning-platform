@@ -1,10 +1,12 @@
 import { combineReducers, createStore } from "redux";
 
 import MenuReducer from './ducks/menu'
+import UserReducer from "./ducks/user";
 
 
 const reducer = combineReducers({
-    menu: MenuReducer
+    menu: MenuReducer,
+    user: UserReducer
 })
 
 

@@ -12,19 +12,22 @@ export const StudentMenu = () => {
 
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search)
-        console.log(urlParams.get("type"));
         const newMenuData = []
+        let toUpdate = false
         if(urlParams.has("type")) {
             for (const m of menu.data) {
                 if(m.type === urlParams.get("type")) {
+                    if(!m.isClicked) toUpdate = true
                     newMenuData.push({...m, isClicked: true})
                 } else {
                     newMenuData.push({...m, isClicked: false})
                 }
             }
-            dispatch(UpdateMenuData(newMenuData))
+            if(toUpdate) {
+                dispatch(UpdateMenuData(newMenuData))
+            }
         }
-    })
+    }, [dispatch, menu])
 
     const handleClick = (buttonType) => {
         const newMenuData = []

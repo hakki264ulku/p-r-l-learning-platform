@@ -12,19 +12,37 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useHistory} from 'react-router-dom'
 
 import image from '../../assets/images/piril-welcome.jpeg'
+import credentials from './defaultCredentials';
+import { useDispatch } from 'react-redux';
+import { UpdateUser } from '../../redux/ducks/user';
 
 const theme = createTheme();
 
 export default function Login() {
+  const history = useHistory()
+  const dispatch = useDispatch()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+
+    if(credentials.email === data.get('email') && credentials.password === data.get('password')) {
+      localStorage.setItem("isAuthenticated", true);
+      dispatch(UpdateUser({isAuthenticated: true}))
+
+      history.push("/student")
+    } else {
+      alert("email or password is wrong")
+    }
+
+
   };
 
   return (

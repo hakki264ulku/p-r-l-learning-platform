@@ -48,7 +48,7 @@ const App= ()=> {
           <Route exact path="/event/details" component={() => <EventDetails title="events" title1="details" />}/>
           <Route exact path="/login" component={() =>  <Login title="Login" /> } />
           <Route exact path="/signup" component={() => <SignUp title="Sign Up" />} />
-          <Route exact path="/student" component={() => <StudentHomePage />} />
+          <Route exact path="/student" component={() => <StudentHomePage title="Home Page" />} />
           <Route exact path="/student/3dcontent" component={()=> <ThreeDContentsPage /> } />
           <Route path="/student/3dcontent/content" component={()=> <ThreeDContentPage /> } />
         </Switch>
