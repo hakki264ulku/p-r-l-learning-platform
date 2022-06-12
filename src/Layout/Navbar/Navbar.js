@@ -11,10 +11,9 @@ const Navbar = () => {
     const user = useSelector(state => state.user)
 
     useEffect(() => {
-      setAuth(localStorage.getItem("isAuthenticated"))
-    },[auth])
+        setAuth(localStorage.getItem("isAuthenticated"))
+    }, [auth, user])
 
-   
 
     const handleClick = () => {
         updateClass(true)
@@ -92,14 +91,21 @@ const Navbar = () => {
                                     <div className={addClass ? 'vissible__cross' : 'hidden__corss'} onClick={handleClickCross}>
                                         <FontAwesomeIcon icon="times" />
                                     </div>
-                                    {(!user.isAuthenticated && !auth ) && <div className="contact__btn">
+                                    {(!auth) && <div className="contact__btn">
                                         <a href="/login">Sign In/Up</a>
                                     </div>}
 
-                                    {user.isAuthenticated && <div className="contact__btn">
+                                    {auth && <div className="contact__btn">
                                         <a href="/logout">Sign out</a>
                                     </div>}
 
+                                    {
+                                    auth &&
+                                        <div>
+                                            <a href='/student'>
+                                                <FontAwesomeIcon color='orange' size='2x' icon={['fas', 'home']} />
+                                            </a>
+                                        </div>}
                                 </div>
                                 <div className="mobile__menu" onClick={handleClick}>
                                     <span></span>

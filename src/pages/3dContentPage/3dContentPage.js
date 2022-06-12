@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Container, ContentContainer, Title } from './3dContentPageStyles'
+import { Game } from './Game';
+
 
 export const ThreeDContentPage = () => {
   const history = useHistory()
@@ -15,7 +17,7 @@ export const ThreeDContentPage = () => {
     <Container>
       <Title>Content Name</Title>
       <ContentContainer>
-
+        <Game />
       </ContentContainer>
     </Container>
   )
