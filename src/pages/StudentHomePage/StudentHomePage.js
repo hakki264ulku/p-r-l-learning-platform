@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { StudentDashboard } from "../../components/StudentDashboard/StudentDashboard";
 import { StudentMenu } from "../../components/StudentMenu/StudentMenu";
+import { Dropdown } from "../../components/StudentMenu/StudentMenuStyles";
 import { MainContainer, StudentDashboardBorder } from "./StudentHomePageStyles";
 
 const StudentHomePage = ({ title }) => {

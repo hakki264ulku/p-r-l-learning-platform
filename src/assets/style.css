@@ -170,9 +170,9 @@ body {
                 1  :-Navbar-:
 *=============================================================================================*/
 .navbar__top {
-	background: rgb(236, 212, 212);
+	background: rgb(246, 233, 233);
 	height: 60px;
-	border-bottom: 1px solid rgb(236, 212, 212);
+	border-bottom: 1px solid rgb(246, 233, 233);
 	align-items: center;
 	display: flex;
 	border-bottom: 2px solid rgb(52, 47, 47);
@@ -218,7 +218,7 @@ body {
 .navbar__top .top__social li a:hover {
 	background: #564fff;
 	transform: scale(1);
-	color: rgb(236, 212, 212);
+	color: rgb(246, 233, 233);
 }
 .navbar__top .nav__top__left {
 	display: flex;
@@ -236,7 +236,7 @@ body {
 }
 
 .navbar__wrapper {
-	background: rgb(236, 212, 212);
+	background: rgb(246, 233, 233);
 }
 
 .navbar__inner_container {
