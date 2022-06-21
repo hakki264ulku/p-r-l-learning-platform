@@ -76,6 +76,22 @@ export const ThreeDContentsPage = () => {
 						<CardTitle>Card Title</CardTitle>
 						<CardImage src="https://picsum.photos/id/227/200/150" />
 					</CardContainer>
+					<CardContainer onClick={() => handleClick("123")}>
+						<CardTitle>Card Title</CardTitle>
+						<CardImage src="https://picsum.photos/id/227/200/150" />
+					</CardContainer>
+					<CardContainer onClick={() => handleClick("123")}>
+						<CardTitle>Card Title</CardTitle>
+						<CardImage src="https://picsum.photos/id/227/200/150" />
+					</CardContainer>
+					<CardContainer onClick={() => handleClick("123")}>
+						<CardTitle>Card Title</CardTitle>
+						<CardImage src="https://picsum.photos/id/227/200/150" />
+					</CardContainer>
+					<CardContainer onClick={() => handleClick("123")}>
+						<CardTitle>Card Title</CardTitle>
+						<CardImage src="https://picsum.photos/id/227/200/150" />
+					</CardContainer>
 				</ContentsContainer>
 			</ContentContainer>
 		</Container>
