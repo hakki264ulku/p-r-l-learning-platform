@@ -48,7 +48,7 @@ export const ThreeDContentsPage = () => {
           {gameConfig.games.map((game) => (
             <CardContainer onClick={() => handleClick(game.id)}>
               <CardTitle>{game.title}</CardTitle>
-              <CardImage src="https://picsum.photos/id/227/200/150" />
+              <CardImage src={game.imagePath} />
             </CardContainer>
           ))}
         </ContentsContainer>

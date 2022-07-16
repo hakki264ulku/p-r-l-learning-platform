@@ -36,4 +36,4 @@ export const CardContainer = styled.div`
 `;
 
 export const CardTitle = tw.p`font-bold text-white text-lg `;
-export const CardImage = tw.img`w-auto h-auto `;
+export const CardImage = tw.img`w-48 h-32`;

@@ -5,6 +5,7 @@ const pirilGame = {
   codeUrl: "/games/PirilGame/Build/PirilGame.wasm",
   id: "1",
   title: "Animals",
+  imagePath: "/games/PirilGame/animals.jpeg",
 };
 
 const finalCodingGame = {
@@ -14,6 +15,7 @@ const finalCodingGame = {
   codeUrl: "/games/final_coding_game/Build/final_coding_game.wasm",
   id: "2",
   title: "Coding",
+  imagePath: "/games/final_coding_game/code.jpeg",
 };
 
 const spaceGame = {
@@ -23,6 +25,7 @@ const spaceGame = {
   codeUrl: "/games/Space_game/Build/Space_game.wasm",
   id: "3",
   title: "Planets & Astronaut",
+  imagePath: "/games/Space_game/space.jpeg",
 };
 
 const game = {
@@ -32,18 +35,21 @@ const game = {
   codeUrl: "/games/Game/Build/Game.wasm",
   id: "4",
   title: "Planets",
+  imagePath: "/games/Game/space.jpeg",
 };
 
 const config = {
   games: [
     pirilGame,
     finalCodingGame,
-    spaceGame,
+    pirilGame,
     game,
+    spaceGame,
     pirilGame,
     finalCodingGame,
-    spaceGame,
     game,
+    spaceGame,
+    finalCodingGame,
   ],
 };
 
