@@ -9,13 +9,13 @@ const pirilGame = {
 };
 
 const finalCodingGame = {
-	loaderUrl: "/games/final_coding_game/Build/final_coding_game.loader.js",
-	dataUrl: "/games/final_coding_game/Build/final_coding_game.data",
-	frameworkUrl: "/games/final_coding_game/Build/final_coding_game.framework.js",
-	codeUrl: "/games/final_coding_game/Build/final_coding_game.wasm",
+	loaderUrl: "/games/efso_coding_game/Build/efso_coding_game.loader.js",
+	dataUrl: "/games/efso_coding_game/Build/efso_coding_game.data",
+	frameworkUrl: "/games/efso_coding_game/Build/efso_coding_game.framework.js",
+	codeUrl: "/games/efso_coding_game/Build/efso_coding_game.wasm",
 	id: "2",
 	title: "Coding",
-	imagePath: "/games/final_coding_game/code.jpeg",
+	imagePath: "/games/efso_coding_game/code.jpeg",
 };
 
 const spaceGame = {
